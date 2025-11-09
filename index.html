@@ -3,58 +3,796 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Econosave Minimart - Legal</title>
+    <title>Econosave Minimart - Fresh Groceries Delivered to Your Door</title>
+    <meta name="description" content="Download Econosave Minimart app for fresh groceries delivered to your door in Morong, Rizal. 8,000+ products, easy ordering, fast delivery!">
+    
+    <!-- Open Graph for Facebook -->
+    <meta property="og:title" content="Econosave Minimart - Fresh Groceries Delivered">
+    <meta property="og:description" content="Shop 8,000+ products from your phone. Fresh groceries, fast delivery in Morong, Rizal!">
+    <meta property="og:image" content="assets/images/logo.png">
+    <meta property="og:type" content="website">
+    
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
         }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #04BF8A 0%, #059669 100%);
+            color: white;
+            padding: 60px 20px;
             text-align: center;
         }
-        h1 {
-            color: #04BF8A;
+        
+        .hero .container {
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        .links {
-            margin-top: 30px;
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
         }
-        .links a {
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        .download-btn {
             display: inline-block;
-            margin: 10px 20px;
-            padding: 15px 30px;
+            background: #F59E0B;
+            color: white;
+            padding: 18px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
+        }
+        
+        .download-btn:hover {
+            background: #D97706;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(245, 158, 11, 0.5);
+        }
+        
+        .download-btn-secondary {
+            background: white;
+            color: #04BF8A;
+            margin-left: 15px;
+        }
+        
+        .download-btn-secondary:hover {
+            background: #f0f0f0;
+            color: #059669;
+        }
+        
+        /* App Explanation Section */
+        .explanation {
+            padding: 80px 20px;
+            background: white;
+            text-align: center;
+        }
+        
+        .explanation h2 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+        }
+        
+        .explanation p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+        
+        /* Screenshots Section */
+        .screenshots {
+            padding: 80px 20px;
+            background: #f9fafb;
+            text-align: center;
+        }
+        
+        .screenshots h2 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 50px;
+        }
+        
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .screenshot-item {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .screenshot-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .screenshot-item img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .screenshot-item h3 {
+            margin-top: 20px;
+            color: #04BF8A;
+            font-size: 1.2rem;
+        }
+        
+        .screenshot-item p {
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        .screenshot-placeholder {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #059669;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 20px;
+            background: white;
+        }
+        
+        .features h2 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+            background: #f9fafb;
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
             background: #04BF8A;
             color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(4, 191, 138, 0.3);
         }
-        .links a:hover {
-            background: #03a076;
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .feature-card:hover h3,
+        .feature-card:hover p {
+            color: white;
+        }
+        
+        /* Delivery Area Section */
+        .delivery-area {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #04BF8A 0%, #059669 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .delivery-area h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .delivery-area p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .coverage-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 900px;
+            margin: 40px auto;
+        }
+        
+        .coverage-item {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 80px 20px;
+            background: white;
+        }
+        
+        .benefits h2 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .benefit-card {
+            display: flex;
+            align-items: flex-start;
+            padding: 30px;
+            background: #f9fafb;
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+        
+        .benefit-card:hover {
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-right: 20px;
+            color: #04BF8A;
+        }
+        
+        .benefit-content h3 {
+            font-size: 1.4rem;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+        
+        .benefit-content p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Tindahan Club Section */
+        .tindahan-club {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .tindahan-club h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .tindahan-club p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .tindahan-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto 40px;
+        }
+        
+        .tindahan-feature {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .tindahan-feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 80px 20px;
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        .footer {
+            padding: 40px 20px;
+            background: #0f0f0f;
+            color: white;
+            text-align: center;
+        }
+        
+        .footer p {
+            margin-bottom: 10px;
+        }
+        
+        .footer a {
+            color: #04BF8A;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .download-btn {
+                display: block;
+                margin: 10px auto;
+                max-width: 300px;
+            }
+            
+            .download-btn-secondary {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            
+            .explanation h2,
+            .screenshots h2,
+            .features h2,
+            .delivery-area h2,
+            .benefits h2,
+            .tindahan-club h2,
+            .cta h2 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Econosave Minimart</h1>
-        <p>Your trusted online grocery store in Morong, Rizal</p>
-        
-        <div class="links">
-            <a href="privacy-policy.html">Privacy Policy</a>
-            <a href="terms-of-service.html">Terms of Service</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>🛒 Econosave Minimart</h1>
+            <p>Fresh Groceries Delivered to Your Door</p>
+            <p style="font-size: 1.2rem; margin-bottom: 40px;">Shop 8,000+ products from your phone. Fast delivery in Morong, Rizal!</p>
+            <a href="#" class="download-btn firebase-download">📱 Download Now</a>
+            <a href="#features" class="download-btn download-btn-secondary">Learn More</a>
         </div>
+    </section>
+
+    <!-- App Explanation -->
+    <section class="explanation">
+        <h2>Your Neighborhood Grocery, Now on Your Phone</h2>
+        <p>
+            Econosave Minimart brings the convenience of online grocery shopping to Morong, Rizal. 
+            Browse thousands of fresh products, order with just a few taps, and have everything delivered 
+            right to your doorstep. Whether you're buying daily essentials for your family or stocking up 
+            your sari-sari store, we've got you covered!
+        </p>
+        <p style="font-size: 1.3rem; color: #04BF8A; font-weight: 600; margin-top: 30px;">
+            No more hassle. No more long lines. Just fresh groceries, delivered fast. 💚
+        </p>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots">
+        <h2>See How Easy It Is</h2>
+        <div class="screenshot-grid">
+            <div class="screenshot-item">
+                <img src="assets/images/landing-assets/home.jpg" alt="Home Screen - Browse Categories">
+                <h3>Browse Products</h3>
+                <p>Explore 8,000+ products across all categories</p>
+            </div>
+            
+            <div class="screenshot-item">
+                <img src="assets/images/landing-assets/product-lists.jpg" alt="Product Lists">
+                <h3>Find What You Need</h3>
+                <p>Easy search and organized categories</p>
+            </div>
+            
+            <div class="screenshot-item">
+                <img src="assets/images/landing-assets/cart.jpg" alt="Cart Screen - Easy Checkout">
+                <h3>Add to Cart</h3>
+                <p>Simple checkout process in seconds</p>
+            </div>
+            
+            <div class="screenshot-item">
+                <img src="assets/images/landing-assets/order-status.jpg" alt="Orders Screen - Track Delivery">
+                <h3>Track Orders</h3>
+                <p>Monitor your delivery in real-time</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2>Why Choose Econosave App?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🛍️</div>
+                <h3>8,000+ Products</h3>
+                <p>Everything you need - rice, vegetables, meat, seafood, snacks, beverages, household items, and more!</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🚚</div>
+                <h3>Fast Delivery</h3>
+                <p>Same-day delivery available! Get your groceries delivered within hours of ordering.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🥬</div>
+                <h3>Fresh Quality</h3>
+                <p>We carefully select and deliver only the freshest products to your door.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💳</div>
+                <h3>Easy Payment</h3>
+                <p>Multiple payment options - Cash on Delivery, GCash, Bank Transfer. Whatever works for you!</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Simple to Use</h3>
+                <p>User-friendly interface. Even if you're not techy, you can easily navigate and order!</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Best Prices</h3>
+                <p>Competitive prices on all products. Same trusted quality, now more convenient!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Area Section -->
+    <section class="delivery-area">
+        <h2>📍 We Deliver Across Rizal Province</h2>
+        <p>Fast and reliable delivery service covering multiple municipalities</p>
+        <div class="coverage-list">
+            <div class="coverage-item">Morong</div>
+            <div class="coverage-item">Cardona</div>
+            <div class="coverage-item">Binangonan</div>
+            <div class="coverage-item">Teresa</div>
+            <div class="coverage-item">Baras</div>
+            <div class="coverage-item">Tanay (Selected Areas)</div>
+        </div>
+        <p style="margin-top: 30px; font-size: 1.1rem;">
+            Serving the communities of Rizal with fresh groceries! 🚚💚
+        </p>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <h2>Benefits You'll Love</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">⏰</div>
+                <div class="benefit-content">
+                    <h3>Save Time</h3>
+                    <p>No need to travel to the market or grocery store. Shop from home, office, or anywhere!</p>
+                </div>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon">💪</div>
+                <div class="benefit-content">
+                    <h3>Avoid the Hassle</h3>
+                    <p>No more carrying heavy bags, waiting in long lines, or dealing with traffic and hot weather.</p>
+                </div>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon">👨‍👩‍👧‍👦</div>
+                <div class="benefit-content">
+                    <h3>More Family Time</h3>
+                    <p>Spend less time shopping and more time with your loved ones. We handle the groceries!</p>
+                </div>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon">🔒</div>
+                <div class="benefit-content">
+                    <h3>Safe & Secure</h3>
+                    <p>Your data is protected. Secure payment options. Trusted by the Morong community.</p>
+                </div>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon">📋</div>
+                <div class="benefit-content">
+                    <h3>Easy Reordering</h3>
+                    <p>Favorite your regular items and reorder with just one tap. Shopping made even faster!</p>
+                </div>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon">🎯</div>
+                <div class="benefit-content">
+                    <h3>Special Promos</h3>
+                    <p>Get exclusive app-only discounts and promotions. Save more money with every order!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tindahan Club Section -->
+    <section class="tindahan-club">
+        <h2>⭐ Tindahan Club - For Store Owners</h2>
+        <p>
+            Are you a sari-sari store owner? Join our exclusive Tindahan Club and enjoy wholesale prices, 
+            bulk ordering, and business features designed to help your store grow!
+        </p>
+        <div class="tindahan-features">
+            <div class="tindahan-feature">
+                <h3>💸 Wholesale Prices</h3>
+                <p>Get better rates for bulk purchases</p>
+            </div>
+            <div class="tindahan-feature">
+                <h3>📦 Bulk Ordering</h3>
+                <p>Order large quantities easily</p>
+            </div>
+            <div class="tindahan-feature">
+                <h3>📊 Business Tools</h3>
+                <p>Manage inventory and track orders</p>
+            </div>
+            <div class="tindahan-feature">
+                <h3>🚀 Priority Delivery</h3>
+                <p>Faster delivery for business members</p>
+            </div>
+        </div>
+        <a href="#download" class="download-btn" style="background: white; color: #F59E0B;">Join Tindahan Club</a>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="cta" id="download">
+        <h2>Ready to Experience the Convenience?</h2>
+        <p>Download Econosave Minimart app now and start shopping smarter!</p>
         
-        <p style="margin-top: 40px; color: #666;">
+        <a href="#" id="mainDownloadBtn" class="download-btn" style="margin: 10px;">
+            📱 Download APK Now
+        </a>
+        
+        <p style="margin-top: 40px; font-size: 1rem; opacity: 0.7;">
+            Free to download. Available on Android.
+        </p>
+        
+        <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.6;">
+            Note: Enable "Install from Unknown Sources" in your phone settings to install.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <p><strong>Econosave Minimart</strong></p>
+        <p>Fresh Groceries Delivered to Your Door</p>
+        <p>📍 Morong, Rizal, Philippines</p>
+        <p>📧 <a href="mailto:econosave.minimart.morong.rizal@gmail.com">econosave.minimart.morong.rizal@gmail.com</a></p>
+        <p style="margin-top: 20px;">
+            <a href="https://marlonbbernal.github.io/cuyi-system/privacy-policy.html" target="_blank">Privacy Policy</a>
+        </p>
+        <p style="margin-top: 30px; opacity: 0.6; font-size: 0.9rem;">
             © 2025 Econosave Minimart. All rights reserved.
         </p>
-    </div>
+    </section>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    
+    <!-- Analytics & Tracking -->
+    <script>
+        // Initialize Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyBpLHt7OATNujUOmJJtEAOaTUUAlJ3LJYE",
+            authDomain: "econosave-minimart.firebaseapp.com",
+            projectId: "econosave-minimart",
+            storageBucket: "econosave-minimart.firebasestorage.app",
+            messagingSenderId: "426707659015",
+            appId: "1:426707659015:web:aa75c4cf2835ffce76e8fc",
+            measurementId: "G-0XEEG31K29"
+        };
+        
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        
+        // Track page visit
+        async function trackPageVisit() {
+            try {
+                const visitData = {
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                    page: 'landing-page',
+                    userAgent: navigator.userAgent,
+                    referrer: document.referrer || 'direct',
+                    screenWidth: window.screen.width,
+                    screenHeight: window.screen.height,
+                    language: navigator.language
+                };
+                
+                // Add visit to collection
+                await db.collection('landing_page_visits').add(visitData);
+                
+                // Update total visits counter
+                const counterRef = db.collection('analytics').doc('landing_page_stats');
+                await counterRef.set({
+                    totalVisits: firebase.firestore.FieldValue.increment(1),
+                    lastVisit: firebase.firestore.FieldValue.serverTimestamp()
+                }, { merge: true });
+                
+                console.log('Page visit tracked successfully');
+            } catch (error) {
+                console.error('Error tracking visit:', error);
+            }
+        }
+        
+        // Track download button clicks
+        async function trackDownloadClick(buttonLocation) {
+            try {
+                await db.collection('landing_page_clicks').add({
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                    action: 'download_button_click',
+                    location: buttonLocation,
+                    page: 'landing-page'
+                });
+                
+                // Update click counter
+                const counterRef = db.collection('analytics').doc('landing_page_stats');
+                await counterRef.set({
+                    totalDownloadClicks: firebase.firestore.FieldValue.increment(1)
+                }, { merge: true });
+                
+                console.log('Download click tracked');
+            } catch (error) {
+                console.error('Error tracking click:', error);
+            }
+        }
+        
+        // Track section views (when user scrolls to them)
+        function trackSectionView(sectionName) {
+            db.collection('landing_page_section_views').add({
+                timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                section: sectionName
+            }).catch(error => console.error('Error tracking section view:', error));
+        }
+        
+        // Firebase App Distribution URL - Version 1.2.2
+        // This link tracks downloads and provides install instructions
+        const FIREBASE_APP_DISTRIBUTION_URL = 'https://appdistribution.firebase.google.com/testerapps/1:557994979383:android:45e5bd53aa85022adacfb2/releases/32bv868cgljj0';
+        
+        // Fallback to direct APK if needed
+        const DIRECT_APK_URL = 'https://expo.dev/artifacts/eas/vfJ3STb56CdxEMctxZ2X6g.apk';
+        
+        // Initialize tracking on page load
+        window.addEventListener('load', function() {
+            trackPageVisit();
+            
+            // Set up Firebase App Distribution download links
+            const firebaseDownloadButtons = document.querySelectorAll('.firebase-download, #mainDownloadBtn');
+            firebaseDownloadButtons.forEach(btn => {
+                // Use Firebase App Distribution if available, otherwise use direct APK
+                const downloadUrl = FIREBASE_APP_DISTRIBUTION_URL !== 'YOUR_FIREBASE_APP_DISTRIBUTION_LINK_HERE' 
+                    ? FIREBASE_APP_DISTRIBUTION_URL 
+                    : DIRECT_APK_URL;
+                
+                btn.href = downloadUrl;
+                
+                btn.addEventListener('click', function(e) {
+                    const location = this.closest('section').className || 'unknown';
+                    trackDownloadClick(location);
+                    
+                    // Optional: Show instructions modal
+                    if (!FIREBASE_APP_DISTRIBUTION_URL.includes('appdistribution.firebase')) {
+                        // Direct APK download
+                        console.log('Starting APK download...');
+                    }
+                });
+            });
+            
+            // Track all other download button clicks
+            document.querySelectorAll('.download-btn').forEach((btn, index) => {
+                if (!btn.classList.contains('firebase-download') && btn.id !== 'mainDownloadBtn') {
+                    btn.addEventListener('click', function(e) {
+                        const location = this.closest('section').className || 'unknown';
+                        trackDownloadClick(location);
+                    });
+                }
+            });
+            
+            // Track section views using Intersection Observer
+            const sections = document.querySelectorAll('section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const sectionName = entry.target.className || entry.target.id || 'unnamed';
+                        trackSectionView(sectionName);
+                        observer.unobserve(entry.target); // Track only once per session
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
 </body>
 </html>
