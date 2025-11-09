@@ -736,12 +736,12 @@
             }).catch(error => console.error('Error tracking section view:', error));
         }
         
-        // Firebase App Distribution URL - Version 1.2.2
-        // This link tracks downloads and provides install instructions
-        const FIREBASE_APP_DISTRIBUTION_URL = 'https://appdistribution.firebase.google.com/testerapps/1:557994979383:android:45e5bd53aa85022adacfb2/releases/32bv868cgljj0';
-        
-        // Fallback to direct APK if needed
+        // Direct APK Download URL - Version 1.2.2 (Build 8)
+        // Public download link - no invitation needed
         const DIRECT_APK_URL = 'https://expo.dev/artifacts/eas/vfJ3STb56CdxEMctxZ2X6g.apk';
+        
+        // Firebase App Distribution requires testers to be invited, so using direct APK for public access
+        const FIREBASE_APP_DISTRIBUTION_URL = DIRECT_APK_URL;
         
         // Initialize tracking on page load
         window.addEventListener('load', function() {
